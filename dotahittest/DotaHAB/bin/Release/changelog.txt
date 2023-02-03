@@ -1,0 +1,76 @@
+#0.999t1
+ - Replay Parser: some UI fixes.
+ - Replay Parser: Kill Log now also contains tower/barrack destruction information.
+ - Replay Parser: Replay Raw Data Viewer shows time with milliseconds.
+ - Data Dump now also includes UnitUI in the dump.
+ - Online Updater can now be stopped.
+#0.999t
+ - Replay Parser (Browser mode): Added "View in WarCraft III" context-menu item to view selected replay directly in war3.
+ - Replay Parser: Added "<" (previous replay), ">" (next replay), "view" (view in war3) buttons to be able to easily navigate replays without going back to Browser mode.
+ - Replay Parser: Optimized map cache usage (faster parsing).
+ - Replay Parser: Opening replay files via windows explorer (when DotaHIT is associated with ".w3g" files) should now be faster.
+ - Replay Parser: Replay Raw Data Viewer now properly copies only selected rows to clipboard
+ - Replay Parser: Game statistics grid now has "Hero K/D/A" (assists added) and "Creep K/D/N" (neutrals added) columns.
+ - Replay Parser: Fixed some bugs with AI replays parsing.
+ - Replay Parser: Replay Finder now allows you to stop the searching process.
+ - Replay Parser: Replay Finder now displays results with some useful replay information (mode, game length, player count, winner)
+ - Replay Parser: If replay is opened via double-clicking Replay Finder's result list, then "<" and ">" buttons will navigate in found replays.
+ - Replay Parser: Removed 'Extract data from found replays' feature from Replay Finder. It wouldn't really work with replay-stats cache.
+ - Replay Parser: New tool added - Replay Statistics. Allows you to view various information about replays you have (hero/player win %, hero pick %, total kills by hero / player, etc.)
+ - Replay Parser: Implemented replay-stats cache system (Options->Cache replay stats). This should greatly speed-up replay processing tools (Replay Finder, Replay Statistics).
+ - Fixed Replay Parser not saving settings when closing DotaHIT window.
+ - Added a fix for blurry hero-stats text in the Options->Settings.
+ - Fixed Abyssal Blade not displaying in the shop's item list.
+ - Greatly improved DotaHIT stability when loading non-DotA maps/replays (DotaHIT still can't work with them, but you can use generic features like Data Dump, Replay Raw Data Viewer, etc.).
+#0.999s5
+ - Fixed some "collection was modified" errors that caused DotaHIT to crash.
+ - DotaHIT can now load latest AI maps correctly. Also added minimal support for AI replays in replay parser (requested by author).
+ - Fixed issues with some heroes being impossible to be picked 2-nd time (Lich, Tinker, etc.)
+ - Loading screen dialog now allows you to save picture with CTRL+S combination.
+#0.999s4
+ - Fixed a bug with "DotA Map"->"Properties" being disabled after opening a map. Also fixed preview/loading screen display bug for recent maps.
+ - Fixed Item Combining Mode to work with 6.66b.
+ - Fixed a few bugs in replay parser.
+ - Added a Replay Raw Data Viewer to Replay Parser. Basically it works like integrated dw3gParser's action viewer. UI is mostly 'stolen' from there too ;).
+#0.999s3
+ - Fixed Item Combining Mode bug in 6.64 that was also causing replays not to parse when map cache is enabled. 
+ - Replay Parser: Optimized map cache storage size (x3 smaller) and load time (x2 faster). Old cache files will be automatically overwritten by new cache files.
+ - Replay Parser: Fixed some bugs. 
+ - You can now use items in the inventory by left-clicking on them (for example to change Power Treads attribute bonus). Item cooldown (if there is) is not supported though.
+#0.999s2
+ - Replay Parser: Implemented map cache system (Options->Cache maps). This should greatly reduce the replay parse time. Enabled by default.
+ - Replay Parser: If the map path provided in the replay does not exist, the default folder is used (Maps\Download) if the map exists there.
+ - Replay Parser: Fixed error that prevented replays to be parsed when no map is loaded (replay map not found).
+ - Replay Parser: Apm now starts counting after hero pick (the result was lower in -cm).
+ - Replay Parser: Fixed a bug in BBCode Settings form that caused a critical error in some cases.
+ - Replay Parser: BBCode Settings form now properly saves the last entered value. 
+ - Replay Parser now remembers maximized/minimized window state. 
+ - Fixed some conditions under which Replay Parser export should display picks.
+ - Fixed some bugs in Replay Parser that caused parse errors.
+ - Detail-mode tooltip: skill tooltip now always shows ability ID (instead of research mode only)
+ - Detail-mode tooltip: added "allowed targets" info for abilities
+ - Fixed Auto-Updater from running each time you run the tool instead of as specified in settings.
+#0.999s1
+ - Implemented auto-update feature. You can manually do Help->Check for Update, or customize auto-update options in Settings
+     Default settings: check for update on startup once each 7 days
+ - fixed a bug in Replay Parser that caused errors when parsing a replay
+ - fixed Geomancer skills to not cause critical error when researching them
+#0.999s
+ - ControlBar default location is above main window instead of below.
+ - Fixed Hero Build load.
+ - Fixed some abilities based on timers to cause DotaHIT to crash (Craken shell, Balanar skills)
+ - Fixed item buy process when there are other heroes picked. Now selected hero always gets the item bought.
+ - Added configuration file switch to the Replay Export panel. With this you can keep configuration presets for different forums.
+ - Replay export now displays bans and picks, and you can customize thier appearance by pressing "bans/picks" button.
+ - Hero class and name can be now customized in HeroTags form (requested long ago by daarksidee).
+ - Added Hero Format combobox to Replay Export panel. You can customize hero string output in the export.
+ - Added "bbC" button to Replay Export panel which allows you to customize bbCode tags for various export data items.
+     Use the "preCode" column to enter opening bbcode tag and "postCode" to enter closing bbcode tag.
+     Note that since its hard to process all possible bbCode tags the user might enter, bbCode is displayed "as is" in the preview. 
+#0.999r5
+ - Fixed for 6.62 (1.24b patch). The WarCraft3 path specified in Settings must point to 1.24b Warcraft, otherwise new maps will not load correctly.
+ - Added detail-mode for items. You can now view information generally not available in the game. Personally I've waited a long time for this feature , because I wanted to find out the exact duration of MoM, +ms boost of Phase Boots, etc.
+ - Fast Item Combining mode is back! And it works a lot better now - it takes almost no time to activate and all (I think) items can be bought instantly without the need to assemble their components.
+ - Fixed some bugs in Replay Parser.
+ - Replay Parser now detects game mode, replay saver, bans and picks.
+ - Changed link to source code in About to sourceforge project. I've moved there from googlecode. 
